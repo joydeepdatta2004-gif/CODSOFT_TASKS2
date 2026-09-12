@@ -1,2 +1,2 @@
-# CODSOFT-_-TASKS2
+# CODSOFT_TASKS2
 CODSOFT Internship Tasks
