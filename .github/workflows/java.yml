@@ -1,0 +1,27 @@
+name: Run Java Program
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-java:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile Java program
+        run: javac StudentGradeCalculator.java
+
+      - name: Run Java program
+        run: echo "85" | java StudentGradeCalculator
