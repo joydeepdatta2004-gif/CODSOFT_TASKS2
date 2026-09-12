@@ -24,4 +24,5 @@ jobs:
         run: javac StudentGradeCalculator.java
 
       - name: Run Java program
-        run: echo "85" | java StudentGradeCalculator
+        run: |
+          printf "Rahul\n3\nMathematics\n85\nPhysics\n78\nComputer Science\n92\n" | java StudentGradeCalculator
